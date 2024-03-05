@@ -2,7 +2,7 @@ name: Formatting
 on: [push, pull_request]
 jobs:
   check-formatting:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v1
@@ -13,7 +13,7 @@ jobs:
 
   auto-formatting:
     name: runner / black
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Check files using the black formatter
